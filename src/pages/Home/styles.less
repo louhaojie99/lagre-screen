@@ -1,0 +1,22 @@
+@headerHeight: 80px; // 顶栏高度
+@footerHeight: 80px; // 底栏高度
+
+.large-screen-layout {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: @headerHeight auto @footerHeight;
+  grid-template-columns: auto;
+
+  .header {
+    background: pink;
+  }
+
+  .main {
+    background: #ccc;
+  }
+
+  .footer {
+    background: pink;
+  }
+}
