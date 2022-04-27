@@ -1,5 +1,5 @@
 <template>
-  <div class="adaption-view" :style="scaleStyle">
+  <div class="adaption-view-warpper" :style="scaleStyle">
     <slot />
   </div>
 </template>
@@ -8,7 +8,7 @@
 import { selectedDefaultSize, debounce } from "./helpr.ts";
 
 export default {
-  name: "AdaptionView",
+  name: "AdaptionViewWarpper",
   props: {
     width: {
       type: Number,

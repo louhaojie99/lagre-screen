@@ -1,22 +1,27 @@
 <template>
-  <AdaptionView>
+  <AdaptionViewWarpper>
     <div class="large-screen-layout">
       <HeaderPanel />
       <MainPanel />
       <FooterPanel />
     </div>
-  </AdaptionView>
+  </AdaptionViewWarpper>
 </template>
 
 <script>
-import AdaptionView from "../../components/layout/AdaptionView.vue";
+import AdaptionViewWarpper from "../../components/layout/AdaptionViewWarpper.vue";
 import HeaderPanel from "./components/HeaderPanel.vue";
 import MainPanel from "./components/MainPanel.vue";
 import FooterPanel from "./components/FooterPanel.vue";
 
 export default {
   name: "Home",
-  components: { AdaptionView, HeaderPanel, MainPanel, FooterPanel },
+  components: {
+    AdaptionViewWarpper,
+    HeaderPanel,
+    MainPanel,
+    FooterPanel,
+  },
 };
 </script>
 
