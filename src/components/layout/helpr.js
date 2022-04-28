@@ -7,7 +7,14 @@
  * @Item    2560 * 1440： 2K高清显示器
  * @Item    3840 * 2160： 4K高清显示器
  */
-export const DefaultSize = [1920, 1080];
+const commonSize = {
+  Item1: [1280, 720],
+  Item2: [1366, 768],
+  Item3: [1920, 1080],
+  Item4: [2560, 1440],
+  Item5: [3840, 2160],
+};
+export const DefaultSize = [...commonSize.Item3]; // 高清液晶显示器
 
 /**
  * 防抖函数

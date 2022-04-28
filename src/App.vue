@@ -10,5 +10,3 @@ export default {
   components: { Home },
 };
 </script>
-
-<style scoped lange="less"></style>
