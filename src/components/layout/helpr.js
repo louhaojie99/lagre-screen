@@ -7,7 +7,7 @@
  * @Item    2560 * 1440： 2K高清显示器
  * @Item    3840 * 2160： 4K高清显示器
  */
-export const selectedDefaultSize: number[] = [1920, 1080];
+export const DefaultSize = [1920, 1080];
 
 /**
  * 防抖函数
@@ -15,13 +15,15 @@ export const selectedDefaultSize: number[] = [1920, 1080];
  * @param {number}   wait  防抖时间
  * @returns
  */
-export function debounce(func: () => {}, wait: number = 500) {
-  let timer: number | null | undefined = null;
+export function debounce(func, wait = 500) {
+  const delay = wait || 500;
+  let timer = null;
   return () => {
+    const args = arguments;
     timer && clearTimeout(timer);
+    const context = this;
     timer = setTimeout(() => {
-      // @ts-ignore
-      func.apply(this);
-    }, wait);
+      func.apply(context, args);
+    }, delay);
   };
 }
