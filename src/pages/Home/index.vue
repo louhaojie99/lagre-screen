@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import AdaptionViewWarpper from "../../components/layout/AdaptionViewWarpper.vue";
+import AdaptionViewWarpper from "@/components/layout/AdaptionViewWarpper.vue";
 import HeaderPanel from "./components/HeaderPanel.vue";
 import MainPanel from "./components/MainPanel.vue";
 import FooterPanel from "./components/FooterPanel.vue";
